@@ -1,0 +1,23 @@
+{
+  "name": "mcp-tools-template",
+  "version": "1.0.0",
+  "description": "MCP工具开发脚手架",
+  "main": "bin/cli.js",
+  "bin": {
+    "mcp-tools-template": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "keywords": ["mcp", "tools", "template", "scaffold"],
+  "author": "puchunjie <puchunjie@live.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puchunjie/mcp-tools-cli.git"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.0"
+  }
+}
