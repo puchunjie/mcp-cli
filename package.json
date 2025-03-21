@@ -1,10 +1,10 @@
 {
-  "name": "mcp-tools-template",
-  "version": "1.0.0",
+  "name": "mcp-tools-cli",
+  "version": "1.0.2",
   "description": "MCP工具开发脚手架",
   "main": "bin/cli.js",
   "bin": {
-    "mcp-tools-template": "bin/cli.js"
+    "mcp-tools-cli": "bin/cli.js"
   },
   "scripts": {
     "start": "node bin/cli.js"

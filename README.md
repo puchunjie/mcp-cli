@@ -18,7 +18,7 @@ You can use this scaffold in two ways:
 ### Method 1: Using npx (Recommended)
 
 ```bash
-npx mcp-tools-template
+npx mcp-tools-cli
 ```
 
 ### Method 2: Global Installation
@@ -54,7 +54,6 @@ mcp-tools-template
 ```
 ├── src/
 │   └── mcp-server.[ts|js]  # MCP server entry file
-├── bin/
 ├── package.json
 ├── tsconfig.json           # TypeScript configuration (if using TS)
 ├── .gitignore

@@ -74,7 +74,6 @@ async function init() {
 
     // 创建项目基础结构
     fs.mkdirSync(path.join(projectDir, 'src'));
-    fs.mkdirSync(path.join(projectDir, 'bin'));
 
     // 生成package.json
     const packageJson = {
@@ -82,9 +81,7 @@ async function init() {
       version: '1.0.0',
       description: answers.description,
       main: answers.useTypescript ? 'dist/mcp-server.js' : 'src/mcp-server.js',
-      bin: {
-        [answers.projectName]: answers.useTypescript ? 'dist/mcp-server.js' : 'src/mcp-server.js'
-      },
+
       scripts: {
         start: answers.useTypescript ? 'tsc && node dist/mcp-server.js' : 'node src/mcp-server.js',
         build: answers.useTypescript ? 'tsc' : 'echo "No build step needed"',
@@ -203,8 +200,10 @@ console.log("${answers.projectName} MCP 服务器已启动");
       }
     }
 
-    // 提示用户安装依赖
-    console.log(chalk.blue('\n📦 请安装依赖:'));
+    // 安装依赖
+    console.log(chalk.blue('\n📦 正在安装依赖...'));
+    process.chdir(projectDir);
+    execSync('npm install', { stdio: 'inherit' });
 
     console.log(chalk.green('\n✅ 项目创建成功!'));
     console.log(chalk.blue(`\n📁 项目位置: ${projectDir}`));

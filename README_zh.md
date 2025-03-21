@@ -18,7 +18,7 @@
 ### 方式1：使用npx（推荐）
 
 ```bash
-npx mcp-tools-template
+npx mcp-tools-cli
 ```
 
 ### 方式2：全局安装
@@ -54,7 +54,6 @@ mcp-tools-template
 ```
 ├── src/
 │   └── mcp-server.[ts|js]  # MCP服务器入口文件
-├── bin/
 ├── package.json
 ├── tsconfig.json           # TypeScript配置（如果使用TS）
 ├── .gitignore
